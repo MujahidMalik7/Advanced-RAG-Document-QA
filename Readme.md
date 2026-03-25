@@ -98,16 +98,29 @@ Here’s a look at how the system handles real-world data and tricky questions. 
 ---
 
 ![App Screenshot](/demo_images/demo.png)
+
 *Instead of just giving you a random snippet, the system reads through the whole document (jumping between pages 0, 1, 4, and 5) to build a complete picture. It’s like having someone read the entire book for you and then giving you the perfect summary.*
 
+---
+
 ![App Screenshot](/demo_images/demo1.png)
+
 *Need a tiny technical detail or a specific number hidden deep in a manual? This system is a pro at hunting them down. It scans across different sections to pull out exactly what you need—like specific settings or model details—without missing a beat.*
 
+---
+
 ![App Screenshot](/demo_images/demo2.png)
+
 *Comparing two complex things side-by-side is usually a headache. Our system does the heavy lifting by looking at various pages to explain the differences—like comparing two different AI models—and lays it out in a clean, easy-to-read format.*
 
+---
+
 ![App Screenshot](/demo_images/demo3.png)
+
 *Even when things get heavy with math and complex research (like the famous Transformer papers), the system stays sharp. It breaks down tricky concepts step-by-step and tells you exactly which page the information came from so you can verify it yourself.*
 
+---
+
 ![App Screenshot](/demo_images/demo4.png)
+
 *The best part? It knows when to say "I don't know." If you ask a question that isn't in the files—like asking about 'Camera Vision' when the paper is about 'Language'—the system won't make things up. It stays grounded in the facts.*
