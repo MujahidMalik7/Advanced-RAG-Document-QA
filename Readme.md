@@ -72,6 +72,7 @@ ChromaDB searched with all 4 queries
 Cross-encoder reranks, keeps top 5 chunks
     ↓
 Claude generates answer with source citations
+```
 
 ## Demo
 ```
