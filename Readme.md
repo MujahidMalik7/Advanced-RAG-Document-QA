@@ -75,7 +75,5 @@ Claude generates answer with source citations
 ```
 
 ## Demo
-```
 
 ![App Screenshot](demo.png)
-```
