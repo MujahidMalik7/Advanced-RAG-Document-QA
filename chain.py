@@ -14,7 +14,7 @@ def get_answer(question, retriever):
     docs = retriever.invoke(question)
 
     if not docs:
-        return "I couldn't find relevant information in the documents."
+        return "I couldn't find relevant information in the documents.", [], None
 
     context = "\n\n".join([doc.page_content for doc in docs])
     
@@ -25,8 +25,9 @@ def get_answer(question, retriever):
         ("human", "Question: {question}\n\nContext: {context}")
     ])
 
-    chain = prompt | model | StrOutputParser()
-
-    answer = chain.invoke({"question": question, "context": context})
-
-    return answer,citations
+    response = (prompt | model).invoke({"question": question, "context": context})
+    answer = StrOutputParser().invoke(response)
+    usage = response.usage_metadata
+    
+    cost = (usage["input_tokens"] * 0.0000008) + (usage["output_tokens"] * 0.000004)
+    return answer,citations,{"input_tokens": usage["input_tokens"], "output_tokens": usage["output_tokens"], "total_cost": cost}
