@@ -15,7 +15,7 @@ def load_retriever():
 
 @st.cache_resource
 def load_whisper():
-    model = WhisperModel("small.en", device = 'cpu', compute_type="int8")
+    model = WhisperModel("small.en", device="cuda", compute_type="float16")
     return model
 
 def display_answer(question, input_ph, output_ph, cost_ph):
